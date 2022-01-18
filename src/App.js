@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [winner, setWinner] = useState(100);
+  const [winner, setWinner] = useState(0);
   const generate = () => {
       setWinner(Math.floor(1 + Math.random() * (301 - 1)));
   };
