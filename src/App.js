@@ -3,9 +3,8 @@ import "./App.css";
 
 function App() {
   const [winner, setWinner] = useState(100);
-  // const winners = [];
   const generate = () => {
-    setWinner(Math.floor(1 + Math.random() * (300 + 1 - 1)));
+      setWinner(Math.floor(1 + Math.random() * (301 - 1)));
   };
   return (
     <div className="App">
