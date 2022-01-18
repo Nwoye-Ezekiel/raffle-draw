@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [winner, setWinner] = useState(100);
+  // const winners = [];
+  const generate = () => {
+    setWinner(Math.floor(1 + Math.random() * (300 + 1 - 1)));
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="card">
+        <p>{winner}</p>
+        <button onClick={generate}>Draw</button>
+      </div>
     </div>
   );
 }
